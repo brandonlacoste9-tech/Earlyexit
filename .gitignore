@@ -145,3 +145,6 @@ vite.config.ts.timestamp-*
 # Astro
 .astro/
 
+# Local Netlify CLI link
+.netlify/
+
