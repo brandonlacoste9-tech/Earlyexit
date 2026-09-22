@@ -1,0 +1,826 @@
+# Early Exit Magazine — Issue 09, Leaving Early.
+# Copied from the public catalog at earlyexit.grok.me (September 2026).
+# To add Issue 10, run `npm run new-issue` and edit the new file. Do not edit src/.
+slug: leaving-early
+number: 9
+volume: 1
+title: Leaving Early
+month: September 2026
+date: '2026-09-01'
+dek: A software engineer in New York compresses a forty-year career into a decade — and writes
+  down the number, the city, and the trade.
+cover: /images/cover.webp
+coverWidth: 1200
+coverHeight: 1600
+coverAlt: A wooden table at night holds a mug, a set of keys, and a letter, facing a rain-streaked window onto a city street.
+hero: /images/hero.webp
+heroWidth: 1400
+heroHeight: 788
+heroAlt: An empty wooden chair in a dark room faces a dusk view of the New York skyline, including the Empire State Building.
+video: https://www.youtube.com/watch?v=se4SHHTThk0
+pullQuotes:
+- text: The plan is not a mood. It is a date, a city, and a monthly number that has to clear.
+  attribution: Why I'm sacrificing my 20s to retire in my 30s
+- text: At 50,000 subscribers the channel had earned just under $8,000 — cumulative, from
+    August to July.
+  attribution: How much YouTube pays at 1K, 10K, and 50K
+- text: The average first-time buyer is 40. Wages have been flat for fifty years while productivity
+    rose 77%.
+  attribution: How Gen Z will change politics forever
+sections:
+- id: editors-letter
+  kicker: Editor's letter
+  heading: A magazine for people trying to leave early.
+  paragraphs:
+  - 'Early Exit is a software engineer in New York documenting the attempt: retire in his
+    thirties, or admit the 9-to-5 was the whole story. Forty-nine videos. Fifty-seven thousand
+    people watching. This issue treats that catalog the way a magazine treats a reporter''s
+    year — as clips you can play, and as arguments you can sit with.'
+  - 'The cover is the plan. The featured film is the paycheck. The lead essay is the politics
+    of staying poor. Around them: how to script without typing, how a down month still gets
+    published, why a large channel might be a trap. Nothing here is a course. It is a desk
+    copy of work that already exists on YouTube, arranged so the through-line is louder than
+    the upload date.'
+- id: sacrificing-20s
+  department: exit
+  role: cover
+  kicker: The full plan
+  heading: Why I'm sacrificing my 20s to retire in my 30s
+  dek: A software engineer in New York compresses a forty-year career into a decade — and
+    writes down the number, the city, and the trade.
+  video: https://www.youtube.com/watch?v=se4SHHTThk0
+  poster: /images/thumbs/se4SHHTThk0.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 945
+  views: 220000
+  published: '2026-03-01'
+  pullQuote: The plan is not a mood. It is a date, a city, and a monthly number that has to
+    clear.
+  paragraphs:
+  - Most people treat early retirement as a screensaver — a picture of a beach they will never
+    book. This clip is the opposite. He puts a number on the table, a decade on the clock,
+    and a life he is willing to make smaller now so it can get larger later.
+  - 'The sacrifice is specific: evenings, weekends, the social calendar that New York sells
+    as a personality. In return, a path out of the building before the building owns the rest
+    of the thirties. The magazine opens here because every other clip in this issue is a tool
+    for that exit — the channel, the ledger, the politics of staying poor.'
+  - 'Watch it as a blueprint, not a sermon. The interesting part is not the hustle. It is
+    the willingness to say the quiet part: this job is a vehicle, not a home.'
+- id: youtube-pays
+  department: craft
+  role: featured
+  kicker: The real numbers
+  heading: How much YouTube pays at 1K, 10K, and 50K
+  dek: Zero at one thousand. Zero at five. Zero at ten. The first dollar arrives late — and
+    two mistakes cost about four thousand of them.
+  video: https://www.youtube.com/watch?v=Fv4s8CAMvIo
+  poster: /images/thumbs/Fv4s8CAMvIo.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 1066
+  views: 216604
+  published: '2026-08-29'
+  pullQuote: At 50,000 subscribers the channel had earned just under $8,000 — cumulative,
+    from August to July.
+  paragraphs:
+  - 'Creators talk about subscriber counts the way cities talk about skylines — as if height
+    were income. This video is a teardown of that lie, using the only ledger that matters:
+    what YouTube actually wired.'
+  - Monetization was denied long enough to leave about $4,000 on the table. YouTube then filed
+    the channel in a category that paid worse. Two videos made half of all revenue. The rest
+    of the catalog, including work he is proud of, paid like a hobby.
+  - The useful ending is not a CPM chart. It is the decision to stop chasing the viral lottery
+    and build something that does not need a thumbnail to survive.
+  chapters:
+  - label: The real numbers, 0 to 50K
+    start: 0
+  - label: The denial that cost $4,000
+    start: 50
+  - label: The category YouTube assigned
+    start: 287
+  - label: Every milestone, every dollar
+    start: 357
+  - label: Four months of decline
+    start: 482
+  - label: Two videos, half the revenue
+    start: 601
+  - label: Why the viral chase ends here
+    start: 731
+  - label: What growth looks like from inside
+    start: 947
+- id: gen-z-politics
+  department: essays
+  role: lead
+  kicker: The long essay
+  heading: How Gen Z will change politics forever
+  dek: Housing, wages, layoffs, a broken promise. Then seven policies — and a personal plan
+    that does not wait for any of them.
+  video: https://www.youtube.com/watch?v=ZMQALttUvyM
+  poster: /images/thumbs/ZMQALttUvyM.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 3477
+  views: 945000
+  published: '2025-11-10'
+  pullQuote: The average first-time buyer is 40. Wages have been flat for fifty years while
+    productivity rose 77%.
+  paragraphs:
+  - 'This is the clip that left the channel and entered the culture: a nearly hour-long argument
+    that Gen Z was sold a ladder with the rungs removed. Housing, wages, a hostile job market,
+    record layoffs beside record profits. It is the most-watched film in the catalog for a
+    reason — it names the weather everyone is standing in.'
+  - The second half is rarer. He does not stop at diagnosis. Housing reform, wages tied to
+    productivity, corporate accountability, healthcare, political reform, education, worker
+    protections — then a section on what a single person can actually do before any of that
+    arrives.
+  - The last minutes return to the magazine's thesis. Waiting for the country to become fair
+    is not a retirement plan. The personal exit — income you own, a cheaper city, a number
+    you can live on — is the part of politics you can pass without a majority.
+  chapters:
+  - label: The broken promise
+    start: 0
+  - label: Housing
+    start: 207
+  - label: Wage stagnation
+    start: 335
+  - label: Hostile job market
+    start: 615
+  - label: Corporate layoffs
+    start: 720
+  - label: Political failure
+    start: 1002
+  - label: Housing reform
+    start: 1165
+  - label: Tie wages to productivity
+    start: 1420
+  - label: Corporate accountability
+    start: 1547
+  - label: Universal healthcare
+    start: 1734
+  - label: Political reform
+    start: 1973
+  - label: Affordable education
+    start: 2261
+  - label: Worker protections
+    start: 2617
+  - label: What you can actually do
+    start: 2766
+  - label: The personal plan
+    start: 3215
+  - label: Call to action
+    start: 3391
+- id: start-in-six-months
+  department: craft
+  role: story
+  kicker: The origin
+  heading: Start a YouTube channel and change your life in six months
+  dek: 'Six months, a desk, and a channel that paid rent in a different currency: proof that
+    starting was the whole trick.'
+  video: https://www.youtube.com/watch?v=xctcQ6lF8IA
+  poster: /images/thumbs/xctcQ6lF8IA.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 1324
+  views: 564000
+  published: '2026-02-28'
+  pullQuote: The next six months will pass whether you start or not.
+  paragraphs:
+  - 'This is the most persuasive recruitment film in the catalog, and it works because it
+    refuses to be a course. He describes sitting at a 9-to-5, thinking about early retirement,
+    and then doing the unfashionable thing: publishing.'
+  - Revenue, subscribers, a Discord that became a town — all of it is downstream of one decision.
+    The clip is a dare with a timestamp. If you are still 'researching' your channel, this
+    is the one to play twice.
+- id: stop-editing
+  department: craft
+  role: story
+  kicker: Process
+  heading: If you see this, stop editing your YouTube videos
+  dek: The edit is where most channels go to die. He argues for a cut that serves the sentence,
+    not the timeline.
+  video: https://www.youtube.com/watch?v=OGID1FKlPys
+  poster: /images/thumbs/OGID1FKlPys.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 1063
+  views: 156000
+  published: '2025-12-20'
+  pullQuote: A clean sentence beats a busy timeline.
+  paragraphs:
+  - There is a whole internet of people sanding jump-cuts until the video has no blood left
+    in it. This clip is a permission slip to stop. Talk, cut the air, publish.
+  - 'It is also why the channel looks the way it does: a man in a room, no documentary crew,
+    no false production value. The craft is in the argument, not the transitions.'
+- id: fifty-k-in-fifty
+  department: craft
+  role: story
+  kicker: The system
+  heading: 50,000 subscribers in 50 videos. Here's how I'd start over.
+  dek: A post-mortem from the other side of the number — what he would repeat, and what he
+    would never do twice.
+  video: https://www.youtube.com/watch?v=qsIjtNMwAqQ
+  poster: /images/thumbs/qsIjtNMwAqQ.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 1393
+  views: 63736
+  published: '2026-08-15'
+  pullQuote: Fewer than fifty videos. More than fifty thousand people. The ratio is the product.
+  paragraphs:
+  - 'Starting over is a thought experiment only a person who already made it can afford. He
+    uses it honestly: the second channel would be narrower, slower to please the algorithm,
+    faster to tell the truth.'
+  - If you only watch one craft film after the cover, make it this one. It is the operating
+    system underneath the rest of the issue.
+- id: script-process
+  department: craft
+  role: story
+  kicker: The method
+  heading: How I script every YouTube video
+  dek: He does not type scripts. He talks them into a document, then cuts the transcript until
+    it is a film — twenty minutes, start to finish.
+  video: https://www.youtube.com/watch?v=AALFi1mZb1o
+  poster: /images/thumbs/AALFi1mZb1o.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 1238
+  views: 46492
+  published: '2026-08-22'
+  pullQuote: If you write a script by typing, you are writing in the wrong language.
+  paragraphs:
+  - Spoken language and written language are not cousins. They are different species. This
+    process treats the camera as a conversation that has been edited, not an essay that has
+    been performed.
+  - 'Storyboard. Brain dump out loud. Overshoot on purpose. Three refining passes. The heresy
+    at the end: he does not worship hooks. For a magazine of clips, that is the point — the
+    middle has to be worth staying for.'
+  chapters:
+  - label: I don't type a single script
+    start: 0
+  - label: Spoken vs written language
+    start: 43
+  - label: Why written scripts sound fake
+    start: 129
+  - label: Storyboarding first
+    start: 217
+  - label: The brain dump
+    start: 406
+  - label: Overshoot and word-count math
+    start: 605
+  - label: Three refining passes
+    start: 728
+  - label: Why hooks are overrated
+    start: 983
+- id: ten-k-in-ten
+  department: craft
+  role: story
+  kicker: The early run
+  heading: How I hit 10K subscribers with only 10 videos
+  dek: 'Fifteen films walked through like a lab notebook: which ones flopped, which one broke,
+    and what the first ten actually did.'
+  video: https://www.youtube.com/watch?v=B4_ituL3QWM
+  poster: /images/thumbs/B4_ituL3QWM.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 1569
+  views: 63400
+  published: '2025-11-23'
+  pullQuote: No course. A mission, an audience, and a format you can repeat on a weeknight.
+  paragraphs:
+  - 'Before the 50K post-mortem there was this: a walk through the first fifteen videos, including
+    the ones that did nothing. Authority, curiosity, transparency, a signature series, a willingness
+    to be disagreed with.'
+  - The meta-lesson is unfashionable. Consistency is not a personality. It is a format you
+    can still make after a full day of engineering.
+  chapters:
+  - label: 10K in 10 videos
+    start: 0
+  - label: Three foundations
+    start: 124
+  - label: Setting the mission
+    start: 235
+  - label: Building authority
+    start: 311
+  - label: Creating curiosity
+    start: 374
+  - label: Radical transparency
+    start: 460
+  - label: Signature series
+    start: 526
+  - label: Listening to the audience
+    start: 600
+  - label: Embracing controversy
+    start: 646
+  - label: The viral breakthrough
+    start: 890
+  - label: Five bigger lessons
+    start: 1212
+- id: ten-k-month
+  department: craft
+  role: story
+  kicker: The blueprint
+  heading: How to make $10K a month from YouTube
+  dek: Not a CPM fantasy — a map from audience to offer, built by someone who still has a
+    day job.
+  video: https://www.youtube.com/watch?v=MS5Q36LkMWA
+  poster: /images/thumbs/MS5Q36LkMWA.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 1198
+  views: 81000
+  published: '2026-03-08'
+  pullQuote: Views are a top of funnel. The business lives underneath them.
+  paragraphs:
+  - 'Ten thousand a month is a number people put in titles because it searches well. He treats
+    it as architecture: trust, a paid community, coaching, and a future product that does
+    not need the algorithm to be in a good mood.'
+  - Pair this with the revenue clip. One is the dream. The other is the wire transfer.
+- id: stop-algorithm
+  department: craft
+  role: story
+  kicker: Audience
+  heading: Stop making content for the algorithm
+  dek: A channel that performs for a machine ends up with subscribers who would not notice
+    if it vanished.
+  video: https://www.youtube.com/watch?v=4RnalfTr5DE
+  poster: /images/thumbs/4RnalfTr5DE.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 787
+  views: 18000
+  published: '2026-03-15'
+  pullQuote: Make it for humans, or do not make it.
+  paragraphs:
+  - The algorithm is a bad editor. It rewards the clip that retains, not the clip that matters.
+    This film is a break with that religion.
+  - The Discord, the letters, the people who would care if he stopped — those are the metrics
+    this issue keeps coming back to.
+- id: dont-go-viral
+  department: craft
+  role: story
+  kicker: Scale
+  heading: You don't need to go viral
+  dek: He already had a viral-shaped audience once. He sold it. This channel is the apology
+    and the method.
+  video: https://www.youtube.com/watch?v=j88hJW2X7BU
+  poster: /images/thumbs/j88hJW2X7BU.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 711
+  views: 18000
+  published: '2025-12-28'
+  pullQuote: How many people would care if you stopped? That is the real metric.
+  paragraphs:
+  - There was a gaming channel, a format that trapped him, an audience that did not follow
+    the person. He quit, sold it, deleted the rest. Then he started this one without the costume.
+  - Creators with 10 to 30 thousand people making real money appear in this clip as a counter-spell
+    to the million-subscriber myth. Keep this next to the 'small channel' film. They are the
+    same argument from two dates.
+- id: small-channel
+  department: craft
+  role: story
+  kicker: Size
+  heading: I don't want a large YouTube channel — and you shouldn't either
+  dek: A ceiling as a design choice. Past a certain size you start performing for people you
+    will never meet and cannot help.
+  video: https://www.youtube.com/watch?v=0ZTwsAxsjE4
+  poster: /images/thumbs/0ZTwsAxsjE4.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 1064
+  views: 10118
+  published: '2026-07-11'
+  pullQuote: A channel can be finished. It does not have to keep eating the life it was built
+    to free.
+  paragraphs:
+  - Ambition usually has no off switch. This clip installs one. He wants a channel that funds
+    an exit, not a media company that needs a staff.
+  - In a magazine about leaving early, this is the most adult sentence in the issue.
+- id: first-100k
+  department: ledger
+  role: story
+  kicker: Origin of capital
+  heading: How I made my first $100,000
+  dek: No inheritance. A house lost at thirteen. Bitcoin at $3,000, a sale too early, then
+    the 2022 crash bought on purpose.
+  video: https://www.youtube.com/watch?v=ODmPqDsM34o
+  poster: /images/thumbs/ODmPqDsM34o.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 853
+  views: 19110
+  published: '2026-08-01'
+  pullQuote: I hit $100,000 net worth in 2023 while making $21 an hour.
+  paragraphs:
+  - The origin story of the ledger is not a salary. It is a sequence of uncomfortable bets
+    made by someone who had already watched a family lose a house. Minimum-wage years, a previous
+    YouTube that actually paid, Bitcoin in the crash-window, cash when it was boring, then
+    buying the wreckage of 2022.
+  - 'He is honest about luck and about the sale he should not have made. The useful residue
+    is the three conditions: income that is not the job, a stomach for looking stupid in public,
+    and a crash you are solvent enough to shop in.'
+  chapters:
+  - label: 100K on $21 an hour
+    start: 0
+  - label: Starting at $8 an hour
+    start: 63
+  - label: The channel that built the capital
+    start: 238
+  - label: Bitcoin at $3,000
+    start: 321
+  - label: Selling too early
+    start: 403
+  - label: Buying the 2022 crash
+    start: 453
+  - label: Three things that made it possible
+    start: 566
+  - label: Was it luck?
+    start: 668
+- id: betting-50k
+  department: ledger
+  role: story
+  kicker: Concentration
+  heading: I'm betting $50,000 on these two stocks
+  dek: Meta and Microsoft, named in public, sized like a person who wants his thirties back.
+    Not advice — a window into a thesis.
+  video: https://www.youtube.com/watch?v=GoUuI--T_N0
+  poster: /images/thumbs/GoUuI--T_N0.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 958
+  views: 17018
+  published: '2026-07-29'
+  pullQuote: $27,000 in Meta. $22,000 in Microsoft. Still buying both.
+  paragraphs:
+  - Index funds will get you there on a forty-year clock. He does not have forty years. The
+    clip is a walk through why two wide-moat companies are the concentrated bet he is willing
+    to explain out loud.
+  - Treat it as journalism about one portfolio, not a shopping list. The interesting number
+    is not the tickers. It is the timeline they are meant to compress.
+  chapters:
+  - label: Why $50K in two names
+    start: 0
+  - label: From $20/hour to $127K
+    start: 60
+  - label: Why indexes are too slow
+    start: 135
+  - label: Why Meta and Microsoft
+    start: 189
+  - label: The Meta case
+    start: 249
+  - label: The Microsoft case
+    start: 498
+  - label: Downside, named
+    start: 675
+- id: side-hustle-2500
+  department: ledger
+  role: story
+  kicker: Dispatch
+  heading: I'm investing $2,500 into my next side hustle
+  dek: Not a ticker. A game he has wanted to play for twenty-two years — and a budget to hire
+    the team that can build it.
+  video: https://www.youtube.com/watch?v=xQQfIgO4Jjs
+  poster: /images/thumbs/xQQfIgO4Jjs.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 680
+  views: 7407
+  published: '2026-09-20'
+  pullQuote: This isn't a financial play. I'm putting money into building the game I want
+    to play.
+  paragraphs:
+  - The newest clip in the issue is a left turn that makes sense only if you have been watching
+    the rest. Burnout is not cured by another index fund. It is cured by a second obsession
+    with a budget.
+  - 'Roblox, a team, $2,500, a second channel. The point he argues is capital allocation as
+    energy allocation: a small check that buys months of wanting to work.'
+  chapters:
+  - label: Spending $2,500 on something that might fail
+    start: 0
+  - label: Why gaming feels boring
+    start: 41
+  - label: Why Roblox
+    start: 101
+  - label: A YouTube past, and burnout
+    start: 223
+  - label: Who he's hiring
+    start: 323
+  - label: Why this beats the market, for now
+    start: 425
+  - label: The second channel
+    start: 544
+- id: march-income
+  department: ledger
+  role: story
+  kicker: Monthly
+  heading: How I made $2,836.98 online in March
+  dek: YouTube, coaching, a community launch — then the tax line that makes the victory smaller,
+    and more honest.
+  video: https://www.youtube.com/watch?v=PaNCww74Mbw
+  poster: /images/thumbs/PaNCww74Mbw.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 707
+  views: 19200
+  published: '2026-04-19'
+  pullQuote: The number cleared $2,500. After tax, the mission was not accomplished.
+  paragraphs:
+  - 'These monthly films are the magazine''s accounting department. March is the month the
+    mix becomes visible: ads, one-on-one calls, a community that is trying to become a product.'
+  - He is careful to ruin the headline. Gross is not freedom. The $2,500 after-tax target
+    — the geographic-arbitrage number — is still the boss.
+- id: gen-z-10k
+  department: ledger
+  role: story
+  kicker: Methods
+  heading: How Gen Z is making $10K a month from $0
+  dek: Five ways that actually exist, ranked by difficulty, with the unfashionable disclaimer
+    that most viewers will not last six months.
+  video: https://www.youtube.com/watch?v=HBWNhjNrra4
+  poster: /images/thumbs/HBWNhjNrra4.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 1525
+  views: 80000
+  published: '2026-02-04'
+  pullQuote: Thousands will watch. Hundreds will say they'll try. A few will still be here
+    in six months.
+  paragraphs:
+  - Freelancing, tutoring, content, UGC, the long game of an audience. He does not pretend
+    the first month pays. He does pretend that starting is rarer than talent.
+  - Use this as a menu, not a prophecy. Then go back to the monthly ledger films to see which
+    line items survive contact with a calendar.
+- id: july-income
+  department: ledger
+  role: story
+  kicker: Monthly
+  heading: How I made $647.64 online in July
+  dek: A down month, published anyway. The ledger is only useful if the ugly months stay in
+    the book.
+  video: https://www.youtube.com/watch?v=_eNDhiKgY7Q
+  poster: /images/thumbs/_eNDhiKgY7Q.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 674
+  views: 8046
+  published: '2026-08-08'
+  pullQuote: If you only publish the good months, you are running a brochure.
+  paragraphs:
+  - July is here so March does not look like a lifestyle. The channel still has a job attached
+    to it. Some months the side income is a rounding error. He puts the rounding error on
+    camera.
+  - 'That is the editorial standard of this issue: the number is the number.'
+- id: youtube-funds-retirement
+  department: exit
+  role: story
+  kicker: The engine
+  heading: How I'm using YouTube to fund my early retirement
+  dek: Ads will not buy the exit. Trust will — if it turns into $2,500 a month after tax in
+    a cheaper country.
+  video: https://www.youtube.com/watch?v=QT3bEmoINYI
+  poster: /images/thumbs/QT3bEmoINYI.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 840
+  views: 16483
+  published: '2026-04-25'
+  pullQuote: YouTube is the engine. The destination is a life that does not need a commute.
+  paragraphs:
+  - 'This is the business model of the magazine, stated without perfume. Ad revenue is a weather
+    report. The real model is an audience that will pay for proximity: community, coaching,
+    and later a product.'
+  - The $2,500 figure is not a flex. It is a design constraint for geographic arbitrage. Everything
+    in The Ledger is in conversation with this number.
+  chapters:
+  - label: Why ads will not fund the exit
+    start: 0
+  - label: The FIRE number
+    start: 78
+  - label: Why ads are unstable
+    start: 138
+  - label: Audience into customers
+    start: 145
+  - label: Community, coaching, later SaaS
+    start: 238
+  - label: Trust over views
+    start: 529
+  - label: What the model actually requires
+    start: 691
+  - label: Roadmap to $2,500
+    start: 791
+- id: chase-dreams
+  department: exit
+  role: story
+  kicker: Risk
+  heading: Chase your dreams. It'll change your life.
+  dek: The safe path is no longer safe. A year of uncomfortable motion against a life that
+    was on rails.
+  video: https://www.youtube.com/watch?v=sh_Gncf__R8
+  poster: /images/thumbs/sh_Gncf__R8.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 510
+  views: 13978
+  published: '2026-04-30'
+  pullQuote: The real risk is staying comfortable while the floor moves.
+  paragraphs:
+  - Short, sharp, and closer to a letter than a lecture. He stacks a year-ago self against
+    the person who started the channel, moved, and stopped waiting for a permission slip.
+  - The wake-up is time. Not productivity time — mortality time. That is why it sits in The
+    Exit and not in The Craft.
+  chapters:
+  - label: Your life, or someone else's plan
+    start: 0
+  - label: The safe path is broken
+    start: 49
+  - label: Comfort vs trying
+    start: 97
+  - label: A year ago versus now
+    start: 106
+  - label: Discomfort as a tool
+    start: 204
+  - label: Time is not guaranteed
+    start: 257
+  - label: Stop waiting
+    start: 398
+- id: moving-cities
+  department: exit
+  role: story
+  kicker: Place
+  heading: Why moving to a new city in your 20s changes everything
+  dek: A city is not a backdrop. It is a set of people, prices, and versions of you that the
+    old zip code would never have asked for.
+  video: https://www.youtube.com/watch?v=npMuYSWMC48
+  poster: /images/thumbs/npMuYSWMC48.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 780
+  views: 12869
+  published: '2026-06-20'
+  pullQuote: You do not find a new life in the same room.
+  paragraphs:
+  - 'Geographic arbitrage usually arrives as a spreadsheet. This clip arrives as a feeling:
+    the version of you that only exists after you have unpacked in a city that does not know
+    your high school.'
+  - New York is both the pressure cooker and the proof. The later plan — a cheaper country,
+    a smaller burn — is the same idea with a passport.
+- id: job-happiness
+  department: exit
+  role: story
+  kicker: The day job
+  heading: How I found happiness in a job I don't love
+  dek: The dream job is a myth that keeps people waiting. He treats the 9-to-5 as a funded
+    residency for the real work.
+  video: https://www.youtube.com/watch?v=kqNRR7V5rXI
+  poster: /images/thumbs/kqNRR7V5rXI.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 720
+  views: 7356
+  published: '2026-07-04'
+  pullQuote: The job does not have to be the love of your life. It has to leave you enough
+    life to build one.
+  paragraphs:
+  - 'A magazine about leaving work still has to talk about staying in it. This is the most
+    practical essay in The Exit: how to stop asking a corporation to be a soulmate.'
+  - Happiness, here, is a boundary. The evenings belong to the channel, the ledger, the plan.
+    The job can be good enough.
+- id: wasting-evenings
+  department: exit
+  role: story
+  kicker: Nights
+  heading: Nine things I do to stop wasting my time after work
+  dek: The plan dies in the hours between the office and sleep. He replaces willpower with
+    a system that does not ask how he feels at 6:12 p.m.
+  video: https://www.youtube.com/watch?v=jcoAo4atLf8
+  poster: /images/thumbs/jcoAo4atLf8.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 720
+  views: 10479
+  published: '2026-06-14'
+  pullQuote: Willpower is a terrible night-shift worker. Systems show up anyway.
+  paragraphs:
+  - If the cover is the decade, this is the Tuesday. Doomscrolling as a second commute. Months
+    that vanish without rest and without progress.
+  - 'The nine things are less interesting than the premise: evenings are the factory floor
+    of an early exit. Lose them and the magazine is just interior design.'
+  chapters:
+  - label: The nightly scroll
+    start: 0
+  - label: Evenings that disappear
+    start: 42
+  - label: Wasting months
+    start: 92
+  - label: Why motivation fails after work
+    start: 138
+  - label: The first changes that stuck
+    start: 184
+  - label: Systems, not willpower
+    start: 268
+  - label: Nights that compound
+    start: 356
+- id: system-keeps-poor
+  department: essays
+  role: story
+  kicker: The poverty tax
+  heading: The system is designed to keep Gen Z poor
+  dek: Commute, car, food, housing, overdrafts, medical debt — a day in two ledgers, one of
+    them punished at every door.
+  video: https://www.youtube.com/watch?v=UFzH7FsbzXM
+  poster: /images/thumbs/UFzH7FsbzXM.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 1488
+  views: 207000
+  published: '2025-12-24'
+  pullQuote: Being poor is expensive. Being rich just makes you richer. That is not a conspiracy.
+    It is a receipt.
+  paragraphs:
+  - 'If the politics film is the wide shot, this is the close-up. He walks a poor day against
+    a rich day and lets the fees stack: time on the train, the car that breaks, the grocery
+    store that charges more for worse food, the bank that harvests overdrafts, the medical
+    bill that becomes a second job.'
+  - The second half is unglamorous on purpose — no-fee banks, a better used car, meal prep,
+    negotiating a bill. Survival is not the exit. It is the breathing room the exit requires.
+  chapters:
+  - label: The system keeps poor people poor
+    start: 0
+  - label: The commute tax
+    start: 37
+  - label: Transportation
+    start: 204
+  - label: Food and housing
+    start: 337
+  - label: Banking fees
+    start: 457
+  - label: Medical debt
+    start: 639
+  - label: Practical ways to fight back
+    start: 858
+  - label: Not your fault
+    start: 1341
+- id: honest-advice
+  department: essays
+  role: story
+  kicker: Letters
+  heading: Honest advice for Gen Z that nobody else is giving you
+  dek: 'A mailbag with the varnish off: the CS degree, the family debt, the muffled first
+    video, the 16-year-old who wants out.'
+  video: https://www.youtube.com/watch?v=ibEkYZO97EE
+  poster: /images/thumbs/ibEkYZO97EE.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 3360
+  views: 5570
+  published: '2026-06-17'
+  pullQuote: The useful advice is almost never the advice that sounds good in a thumbnail.
+  paragraphs:
+  - 'An hour of other people''s lives, read in public. The range is the point: a nineteen-year-old
+    stuck in a degree, a father in debt, an engineer supporting a whole family from New York,
+    a kid who wants to move out.'
+  - It is the community in documentary form. The magazine keeps it because the exit is not
+    a single biography. It is a pile of constraints, each one specific.
+  chapters:
+  - label: A 19-year-old stuck in CS
+    start: 0
+  - label: How do I know I'm doing YouTube right?
+    start: 739
+  - label: Dad, family, debt
+    start: 948
+  - label: The 10% question
+    start: 1191
+  - label: NYC engineer supporting a family
+    start: 1501
+  - label: Pre-med, loans, retiring abroad
+    start: 1814
+  - label: Singapore, China, Hong Kong
+    start: 2023
+  - label: 16, and wanting out
+    start: 2121
+  - label: Muffled audio
+    start: 2321
+  - label: How minimal is too minimal?
+    start: 2467
+- id: hating-everything
+  department: essays
+  role: story
+  kicker: Temper
+  heading: You're hating on everything — and that's why you're miserable
+  dek: 'Irony as a personality is a trap. He argues for a colder kind of seriousness: build
+    something, or stop narrating the wreckage.'
+  video: https://www.youtube.com/watch?v=MsDbXHb0gCY
+  poster: /images/thumbs/MsDbXHb0gCY.webp
+  posterWidth: 960
+  posterHeight: 540
+  duration: 720
+  views: 3594
+  published: '2026-07-08'
+  pullQuote: A hater's feed is a room with no doors.
+  paragraphs:
+  - The internet makes contempt feel like intelligence. This clip is a short argument that
+    it is mostly a mood disorder with a comment section.
+  - It earns its place because the rest of the issue is so willing to criticize the system.
+    The difference is direction. Critique that never turns into a Tuesday night is just another
+    scroll.

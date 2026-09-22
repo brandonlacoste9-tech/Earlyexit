@@ -1,0 +1,19 @@
+{
+  "name": "earlyexit-magazine",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "node scripts/self-check.mjs && astro build && node scripts/linkcheck.mjs",
+    "preview": "astro preview --host 127.0.0.1 --port 4321",
+    "check": "node scripts/self-check.mjs",
+    "new-issue": "node scripts/new-issue.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.14.1",
+    "yaml": "^2.8.1"
+  }
+}

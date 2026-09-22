@@ -1,0 +1,185 @@
+---
+import Base from "../../layouts/Base.astro";
+import VideoSlot from "../../components/VideoSlot.astro";
+import {
+  contentsKicker,
+  formatDate,
+  formatDuration,
+  formatViews,
+  issueLabel,
+  loadIssues,
+  loadSite,
+  youtubeId,
+} from "../../lib/model.mjs";
+
+export function getStaticPaths() {
+  return loadIssues().map((issue: { slug: string }) => ({
+    params: { slug: issue.slug },
+    props: { issue },
+  }));
+}
+
+const { issue } = Astro.props;
+const site = loadSite();
+const label = issueLabel(issue);
+const description = issue.dek;
+const hero = issue.hero ?? issue.cover;
+const heroWidth = issue.hero ? issue.heroWidth ?? issue.coverWidth : issue.coverWidth;
+const heroHeight = issue.hero ? issue.heroHeight ?? issue.coverHeight : issue.coverHeight;
+const heroAlt = issue.hero ? issue.heroAlt ?? issue.coverAlt ?? "" : issue.coverAlt ?? "";
+const coverId = youtubeId(issue.video);
+const coverSection = issue.sections.find((section: { video?: string }) => youtubeId(section.video ?? "") === coverId);
+const quoted = new Set(issue.pullQuotes.map((quote: { text: string }) => quote.text.replace(/\s+/g, " ").trim()));
+
+function showQuote(text: string | undefined) {
+  if (!text) return false;
+  return !quoted.has(text.replace(/\s+/g, " ").trim());
+}
+---
+
+<Base
+  title={`${issue.title} · ${label}`}
+  description={description}
+  path={`/issues/${issue.slug}/`}
+  image={issue.cover}
+  preloadImage={hero}
+>
+  <div class="shell">
+    <header class="issue-hero">
+      <img
+        src={hero}
+        alt={heroAlt}
+        width={heroWidth}
+        height={heroHeight}
+        fetchpriority="high"
+        decoding="async"
+      />
+      <p class="kicker">
+        {label}
+        {issue.month ? ` · ${issue.month}` : ""}
+      </p>
+      <h1>{issue.title}</h1>
+      <p class="dek measure">{issue.dek}</p>
+      {
+        coverSection && (
+          <p class="jump">
+            <a href={`#${coverSection.id}`}>Play the cover film</a>
+          </p>
+        )
+      }
+    </header>
+
+    {
+      !coverSection && (
+        <VideoSlot
+          url={issue.video}
+          title={issue.title}
+          poster={issue.cover}
+          posterWidth={issue.coverWidth}
+          posterHeight={issue.coverHeight}
+          slotId="issue-film"
+        />
+      )
+    }
+
+    <div class="quotes">
+      {
+        issue.pullQuotes.map((quote: { text: string; attribution?: string }) => (
+          <blockquote>
+            <p>{quote.text}</p>
+            {quote.attribution && (
+              <footer>
+                <cite>{quote.attribution}</cite>
+              </footer>
+            )}
+          </blockquote>
+        ))
+      }
+    </div>
+
+    <div class="reader">
+      <nav class="toc" aria-label="In this issue">
+        <details>
+          <summary>
+            In this issue
+            <span>{issue.sections.length}</span>
+          </summary>
+          <ol>
+            {
+              issue.sections.map((section: any) => (
+                <li>
+                  <a href={`#${section.id}`}>
+                    <span class="toc-kicker">{contentsKicker(site, section) || section.kicker}</span>
+                    <span class="toc-title">{section.heading}</span>
+                    {formatDuration(section.duration) && <span class="toc-meta">{formatDuration(section.duration)}</span>}
+                  </a>
+                </li>
+              ))
+            }
+          </ol>
+        </details>
+      </nav>
+
+      <div>
+        {
+          issue.sections.map((section: any) => {
+            const slotId = `slot-${section.id}`;
+            const id = youtubeId(section.video ?? "");
+            return (
+              <article class="piece" id={section.id}>
+                <p class="kicker">{section.kicker || contentsKicker(site, section)}</p>
+                <h2>{section.heading}</h2>
+                {section.dek && <p class="dek">{section.dek}</p>}
+                <p class="meta">
+                  {contentsKicker(site, section) && section.kicker && <span>{contentsKicker(site, section)}</span>}
+                  {formatDate(section.published) && (
+                    <time datetime={section.published}>{formatDate(section.published)}</time>
+                  )}
+                  {formatDuration(section.duration) && <span>{formatDuration(section.duration)}</span>}
+                  {formatViews(section.views) && <span>{formatViews(section.views)} views</span>}
+                </p>
+                {id && (
+                  <VideoSlot
+                    url={section.video}
+                    title={section.heading}
+                    poster={section.poster}
+                    posterWidth={section.posterWidth ?? 960}
+                    posterHeight={section.posterHeight ?? 540}
+                    slotId={slotId}
+                  />
+                )}
+                {id && section.chapters?.length > 0 && (
+                  <ol class="chapters">
+                    {section.chapters.map((chapter: { label: string; start: number }) => (
+                      <li>
+                        <button
+                          class="chapter"
+                          type="button"
+                          data-yt={id}
+                          data-slot={slotId}
+                          data-start={String(chapter.start)}
+                          data-title={`${section.heading} — ${chapter.label}`}
+                        >
+                          <span class="ch-time">{formatDuration(chapter.start) || "0:00"}</span>
+                          <span>{chapter.label}</span>
+                        </button>
+                      </li>
+                    ))}
+                  </ol>
+                )}
+                {showQuote(section.pullQuote) && (
+                  <blockquote>
+                    <p>{section.pullQuote}</p>
+                  </blockquote>
+                )}
+                <div class="prose">
+                  {section.paragraphs.map((paragraph: string) => <p>{paragraph}</p>)}
+                </div>
+              </article>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+</Base>

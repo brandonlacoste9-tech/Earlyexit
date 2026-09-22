@@ -1,0 +1,52 @@
+# Publication settings. A future catalog (another title, another farm, another volume)
+# starts by editing this file and adding issues under content/issues/.
+title: Early Exit
+tagline: A clip magazine from the Early Exit channel.
+description: Early Exit Magazine arranges the public Early Exit YouTube catalog as issues you can read. Volume 01, number 09 is Leaving Early.
+language: en
+url: https://earlyexit.grok.me
+handle: "@earlyexitplan"
+disclaimer: An unofficial clip magazine from @earlyexitplan. Videos remain on YouTube. This site is an editorial arrangement of the public catalog, not the channel itself.
+home:
+  kicker: The catalog
+  heading: Issues
+  lede: A desk copy of the Early Exit channel. Read the newest issue, or add the next one as a file.
+stats:
+  - label: Subscribers
+    value: 57K
+  - label: Videos
+    value: "49"
+  - label: Views
+    value: 3.9M
+links:
+  - label: YouTube
+    href: https://youtube.com/@earlyexitplan
+  - label: Discord
+    href: https://discord.com/invite/aqsxnY5y79
+  - label: Newsletter
+    href: https://earlyexitplan.beehiiv.com/
+  - label: X
+    href: https://x.com/earlyexitplanyt
+  - label: Community
+    href: https://www.joinearlyexit.com
+departments:
+  - id: exit
+    name: The Exit
+    blurb: The timeline, the number, and the life after the 9-to-5.
+  - id: craft
+    name: The Craft
+    blurb: How a 9-to-5 engineer built 57,000 subscribers in under fifty videos.
+  - id: ledger
+    name: The Ledger
+    blurb: Real dollars, real months, no guru math.
+  - id: essays
+    name: Essays
+    blurb: Gen Z, the poverty tax, and what to do with a life that was never designed for you.
+about:
+  kicker: About
+  heading: A magazine for people trying to leave early.
+  paragraphs:
+    - Early Exit is a software engineer in New York documenting one attempt. Retire in his thirties, or admit the 9-to-5 was the whole story.
+    - The channel is @earlyexitplan. Fifty-seven thousand subscribers, forty-nine videos, 3.9 million views. This site is not that channel. It is a desk copy of the public catalog, arranged as issues so the through-line is louder than the upload date.
+    - Nothing here is a course. The cover is the plan. The featured film is the paycheck. The lead essay is the politics of staying poor. Around them sit the craft, the ledger, and the arguments.
+    - Videos stay on YouTube. Press play on a piece and it loads then, not before.

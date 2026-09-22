@@ -1,0 +1,14 @@
+---
+import Base from "../layouts/Base.astro";
+import { loadSite } from "../lib/model.mjs";
+
+const site = loadSite();
+---
+
+<Base title="Page not found" description={`That page is not in ${site.title}.`} path="/404.html">
+  <div class="shell page-head">
+    <p class="kicker">404</p>
+    <h1>This page is not in the issue.</h1>
+    <p class="lede"><a href="/">Back to the issues</a></p>
+  </div>
+</Base>

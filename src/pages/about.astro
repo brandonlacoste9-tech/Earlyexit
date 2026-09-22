@@ -1,0 +1,52 @@
+---
+import Base from "../layouts/Base.astro";
+import { loadSite } from "../lib/model.mjs";
+
+const site = loadSite();
+const about = site.about;
+---
+
+<Base title={about.heading} description={about.paragraphs[0]} path="/about/">
+  <div class="shell">
+    <header class="page-head">
+      {about.kicker && <p class="kicker">{about.kicker}</p>}
+      <h1>{about.heading}</h1>
+    </header>
+    <div class="prose">
+      {about.paragraphs.map((paragraph: string) => <p>{paragraph}</p>)}
+    </div>
+
+    {
+      site.stats?.length > 0 && (
+        <ul class="about-stats">
+          {site.stats.map((stat: { value: string; label: string }) => (
+            <li>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+    <ul class="dept-list">
+      {
+        site.departments.map((department: { name: string; blurb: string }) => (
+          <li>
+            <h2>{department.name}</h2>
+            <p>{department.blurb}</p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2 class="channel-title">The channel</h2>
+    <ul class="link-list">
+      {site.links.map((link: { href: string; label: string }) => (
+        <li>
+          <a href={link.href}>{link.label}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>

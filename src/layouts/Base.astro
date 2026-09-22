@@ -1,0 +1,48 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { loadSite } from "../lib/model.mjs";
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  image?: string;
+  preloadImage?: string;
+}
+
+const { title, description, path, image, preloadImage } = Astro.props;
+const site = loadSite();
+const canonical = new URL(path, site.url).toString();
+const imageUrl = image ? new URL(image, site.url).toString() : undefined;
+const fullTitle = path === "/" ? `${site.title} · ${site.tagline}` : `${title} · ${site.title}`;
+---
+
+<!doctype html>
+<html lang={site.language}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#100e0c" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {imageUrl && <meta property="og:image" content={imageUrl} />}
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <Header path={path} />
+    <main id="content" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

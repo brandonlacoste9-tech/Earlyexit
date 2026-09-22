@@ -1,0 +1,20 @@
+---
+import { loadSite } from "../lib/model.mjs";
+
+const site = loadSite();
+---
+
+<footer class="site-footer">
+  <div class="shell foot">
+    <div>
+      <a class="logo" href="/">{site.title}</a>
+      <p>{site.disclaimer}</p>
+    </div>
+    <nav aria-label="Channel">
+      <p class="kicker">The channel</p>
+      <div class="foot-links">
+        {site.links.map((link: { href: string; label: string }) => <a href={link.href}>{link.label}</a>)}
+      </div>
+    </nav>
+  </div>
+</footer>

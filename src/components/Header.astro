@@ -1,0 +1,38 @@
+---
+import { issueLabel, loadIssues, loadSite } from "../lib/model.mjs";
+
+interface Props {
+  path: string;
+}
+
+const { path } = Astro.props;
+const site = loadSite();
+const latest = loadIssues()[0];
+const links = [
+  { href: "/", label: "Issues" },
+  { href: "/about/", label: "About" },
+];
+---
+
+<header class="site-header">
+  <div class="shell bar">
+    <a class="logo" href="/">{site.title}</a>
+    <nav class="nav" aria-label="Primary">
+      {
+        links.map((link) => (
+          <a href={link.href} aria-current={path === link.href ? "page" : undefined}>
+            {link.label}
+          </a>
+        ))
+      }
+      {
+        latest && (
+          <a href={`/issues/${latest.slug}/`} aria-current={path === `/issues/${latest.slug}/` ? "page" : undefined}>
+            <span class="vol-long">{issueLabel(latest)}</span>
+            <span class="vol-short">No. {String(latest.number).padStart(2, "0")}</span>
+          </a>
+        )
+      }
+    </nav>
+  </div>
+</header>

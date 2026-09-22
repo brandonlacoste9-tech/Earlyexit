@@ -1,0 +1,75 @@
+---
+import { youtubeId } from "../lib/model.mjs";
+
+interface Props {
+  url: string;
+  title: string;
+  poster: string;
+  posterWidth: number;
+  posterHeight: number;
+  slotId: string;
+}
+
+const { url, title, poster, posterWidth, posterHeight, slotId } = Astro.props;
+const id = youtubeId(url);
+if (!id) throw new Error(`Not a YouTube URL: ${url}`);
+const watch = `https://www.youtube.com/watch?v=${id}`;
+---
+
+<div class="slot" id={slotId}>
+  <button
+    class="facade"
+    type="button"
+    data-yt={id}
+    data-slot={slotId}
+    data-start="0"
+    data-title={title}
+  >
+    <img
+      src={poster}
+      alt=""
+      width={posterWidth}
+      height={posterHeight}
+      loading="lazy"
+      decoding="async"
+    />
+    <span class="play">
+      <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+        <path d="M4 2.2 L12 7 L4 11.8 Z" fill="currentColor"></path>
+      </svg>
+      Play
+    </span>
+    <span class="sr-only">{title}</span>
+  </button>
+</div>
+<p class="watch">
+  <a href={watch}>Watch on YouTube</a>
+</p>
+
+<script>
+  function play(slot, id, start, title) {
+    const src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?rel=0&autoplay=1&start=${encodeURIComponent(start)}`;
+    let frame = slot.querySelector("iframe");
+    if (!frame) {
+      frame = document.createElement("iframe");
+      frame.allowFullscreen = true;
+      frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      frame.referrerPolicy = "strict-origin-when-cross-origin";
+      slot.replaceChildren(frame);
+    }
+    frame.title = title;
+    frame.src = src;
+  }
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    const trigger = target.closest("[data-yt]");
+    if (!(trigger instanceof HTMLElement)) return;
+    const slotId = trigger.dataset.slot;
+    const id = trigger.dataset.yt;
+    const slot = slotId ? document.getElementById(slotId) : null;
+    if (!slot || !id) return;
+    play(slot, id, trigger.dataset.start || "0", trigger.dataset.title || "Video");
+  });
+</script>

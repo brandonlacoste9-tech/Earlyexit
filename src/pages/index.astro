@@ -1,0 +1,72 @@
+---
+import Base from "../layouts/Base.astro";
+import { issueLabel, loadIssues, loadSite } from "../lib/model.mjs";
+
+const site = loadSite();
+const issues = loadIssues();
+const latest = issues[0];
+const description = site.description;
+---
+
+<Base
+  title={site.home.heading}
+  description={description}
+  path="/"
+  image={latest?.cover}
+  preloadImage={latest?.cover}
+>
+  <div class="shell">
+    <header class="page-head">
+      {site.home.kicker && <p class="kicker">{site.home.kicker}</p>}
+      <h1>{site.home.heading}</h1>
+      <p class="lede measure">{site.home.lede}</p>
+    </header>
+
+    {
+      issues.length === 0 ? (
+        <p class="lede">No issues yet. Add a YAML file to content/issues and run the build.</p>
+      ) : (
+        <ul class="issue-grid">
+          {issues.map((issue: any, index: number) => {
+            const quote = issue.pullQuotes[0];
+            return (
+              <li class:list={["card", index === 0 && "is-latest"]}>
+                <article>
+                  <a class="card-link" href={`/issues/${issue.slug}/`}>
+                    <img
+                      src={issue.cover}
+                      alt=""
+                      width={issue.coverWidth}
+                      height={issue.coverHeight}
+                      loading={index === 0 ? "eager" : "lazy"}
+                      decoding="async"
+                      fetchpriority={index === 0 ? "high" : "auto"}
+                    />
+                    <div class="card-copy">
+                      <p class="kicker">
+                        {issueLabel(issue)}
+                        {issue.month ? ` · ${issue.month}` : ""}
+                      </p>
+                      <h2>{issue.title}</h2>
+                      <p class="dek">{issue.dek}</p>
+                    </div>
+                  </a>
+                  {quote && (
+                    <blockquote>
+                      <p>{quote.text}</p>
+                      {quote.attribution && (
+                        <footer>
+                          <cite>{quote.attribution}</cite>
+                        </footer>
+                      )}
+                    </blockquote>
+                  )}
+                </article>
+              </li>
+            );
+          })}
+        </ul>
+      )
+    }
+  </div>
+</Base>
