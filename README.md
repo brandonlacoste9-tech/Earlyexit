@@ -16,7 +16,8 @@ npm run dev
 Open http://127.0.0.1:4321/
 
 ```bash
-npm run build     # writes dist/ and fails if an issue file is invalid
+npm run check     # validate site.yaml and published issues, no site build
+npm run build     # same checks, then writes dist/
 npm run preview   # serves dist/ at http://127.0.0.1:4321/
 ```
 
@@ -35,7 +36,9 @@ That writes `content/issues/010-untitled.yaml` (the number follows whatever is a
 3. Delete the `draft: true` line.
 4. Run `npm run build`.
 
-A filename that starts with `_` is also ignored. Build errors name the file and the field. Required on every published issue:
+If the build fails, run `npm run check`. It validates `content/site.yaml` and the published issues without compiling the site, and the message names the file and the field.
+
+A filename that starts with `_` is also ignored. Required on every published issue:
 
 | Field | What it is |
 | --- | --- |
@@ -49,7 +52,7 @@ A filename that starts with `_` is also ignored. Build errors name the file and 
 | `pullQuotes` | At least one `{ text, attribution }`. |
 | `sections` | At least one section with `id`, `heading`, and `paragraphs`. |
 
-A section may also carry `kicker`, `dek`, `department`, `role` (`cover`, `featured`, `lead`), `video`, `poster`, `posterWidth`, `posterHeight`, `duration` (seconds), `views`, `published` (`YYYY-MM-DD`), `pullQuote`, and `chapters` (`{ label, start }` in seconds). `department` must match an `id` in `content/site.yaml`.
+A section may also carry `kicker`, `dek`, `department`, `role` (`cover`, `featured`, `lead`), `video`, `posterWidth`, `posterHeight`, `duration` (seconds), `views`, `published` (`YYYY-MM-DD`), `pullQuote`, and `chapters` (`{ label, start }` in seconds). `department` must match an `id` in `content/site.yaml`. A section with `video` must also set `poster` to a root path in `public/`, such as `/images/thumbs/film.webp`. Omitting it fails the check with `sections[n].poster is required when video is set`.
 
 The publication name, about page, departments, channel links, and homepage lede live in `content/site.yaml`. Change those to retitle the magazine. Do not edit `src/` to publish.
 

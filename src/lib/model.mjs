@@ -177,7 +177,13 @@ function checkIssue(issue, file, fail) {
         fail(`${label}.paragraphs must be a list of non-empty strings`);
       }
       if (section?.video != null && !youtubeId(section.video)) fail(`${label}.video must be a YouTube URL`);
-      if (section?.video != null) publicFile(section.poster, fail);
+      if (section?.video != null) {
+        if (typeof section.poster !== "string" || section.poster.trim() === "") {
+          fail(`${label}.poster is required when video is set`);
+        } else {
+          publicFile(section.poster, (message) => fail(`${label}.poster: ${message}`));
+        }
+      }
       if (Array.isArray(section?.chapters)) {
         section.chapters.forEach((chapter, chapterIndex) => {
           if (typeof chapter?.label !== "string" || chapter.label.trim() === "") {
